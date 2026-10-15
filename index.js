@@ -9,6 +9,10 @@ const users = [
   { id: 4, name: "doe", email: "doe@example.com" },
 ];
 
+app.post("/users", (req, res) => {
+  res.send({ success: true, message: "user added successfully" });
+});
+
 app.get("/users", (req, res) => {
   res.send(users);
 });
